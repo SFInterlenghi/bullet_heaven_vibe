@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dkfnjhkjckoxj"]
+
+[ext_resource type="Script" uid="uid://dhceeq7syhvst" path="res://scenes/ui/game_over.gd" id="1_60xr3"]
+
+[node name="GameOver" type="CanvasLayer" unique_id=1726463093]
+process_mode = 3
+script = ExtResource("1_60xr3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1515977334]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.23529412)
+
+[node name="Label" type="Label" parent="." unique_id=1776060216]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -33.5
+offset_right = 138.0
+offset_bottom = 33.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1766379319]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -44.0
+offset_top = -31.0
+offset_right = 44.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Play Again"

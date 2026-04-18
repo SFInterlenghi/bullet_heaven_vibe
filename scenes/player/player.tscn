@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://l3pq8g1ta3wy"]
+
+[ext_resource type="Script" uid="uid://suun1iyiiv0p" path="res://scenes/player/player.gd" id="1_8afob"]
+[ext_resource type="Script" uid="uid://ek4xj6iuwqti" path="res://scenes/player/weapon_manager.gd" id="2_gmlin"]
+[ext_resource type="PackedScene" uid="uid://b5rtcmoui16o0" path="res://scenes/weapons/bullet.tscn" id="3_lvxji"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
+size = Vector2(32, 32)
+
+[node name="Player" type="CharacterBody2D" unique_id=479465957 groups=["player"]]
+collision_mask = 2
+script = ExtResource("1_8afob")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1688143047]
+shape = SubResource("RectangleShape2D_sh265")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2109828388]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+color = Color(0.15570928, 0.5768989, 0.15113112, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1710165781 groups=["camera"]]
+
+[node name="WeaponManager" type="Node2D" parent="." unique_id=459142560]
+script = ExtResource("2_gmlin")
+bullet_scene = ExtResource("3_lvxji")
