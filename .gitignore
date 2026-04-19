@@ -1,3 +1,9 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Claude Code local settings (machine-specific)
+.claude/settings.local.json
+
+# MCP dev addons (not part of the game)
+addons/godot_mcp/

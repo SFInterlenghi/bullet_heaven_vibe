@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://ckr1j0h5jxv6w"]
 
 [ext_resource type="Script" path="res://scenes/ui/hud.gd" id="1_hud"]
-
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_hud")
 
@@ -52,3 +51,17 @@ text = "Level: 1"
 custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
 value = 0.0
+
+[node name="DashIcon" type="ColorRect" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = -20.0
+color = Color(0, 0, 0, 1)
+
+
+
+

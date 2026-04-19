@@ -1,0 +1,17 @@
+Pressing esc makes the game pause but there is no hud. No continue button, no options button, no display of currently owened weapons etcd.
+The following errors were found 
+
+E 0:00:00:473   hud.gd:26 @ _ready(): Parent node is busy setting up children, `add_child()` failed. Consider using `add_child.call_deferred(child)` instead.
+  <C++ Error>   Condition "data.blocked > 0" is true.
+  <C++ Source>  scene/main/node.cpp:1709 @ add_child()
+  <Stack Trace> hud.gd:26 @ _ready()
+
+
+E 0:00:00:476   hud.gd:30 @ _ready(): Parent node is busy setting up children, `add_child()` failed. Consider using `add_child.call_deferred(child)` instead.
+  <C++ Error>   Condition "data.blocked > 0" is true.
+  <C++ Source>  scene/main/node.cpp:1709 @ add_child()
+  <Stack Trace> hud.gd:30 @ _ready()
+
+Play again button at the end is restarting the game but the hud does not dissapear. Same thing with the game over.
+
+Inseatad of damage dealt create a table to the left that lists the weapons the player had and the damage each on did in the order of the most to the least. This should also appear in case of a game over. Put the sprite of the weapon as weel. The order should be Sprite->Weapon name-> Damage delt. Under them all we have the total damage. maintain the other stats.

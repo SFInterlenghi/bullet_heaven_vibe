@@ -2,18 +2,22 @@
 
 [ext_resource type="PackedScene" uid="uid://l3pq8g1ta3wy" path="res://scenes/player/player.tscn" id="1_dphjl"]
 [ext_resource type="Script" uid="uid://bpyxxo0a0lcil" path="res://scenes/world/enemy_spawner.gd" id="2_1fp7r"]
+[ext_resource type="Script" path="res://scenes/world/destructible_spawner.gd" id="6_destspawn"]
 [ext_resource type="PackedScene" uid="uid://bxuoe2jj034vj" path="res://scenes/enemies/enemy.tscn" id="3_6m72w"]
 
 [ext_resource type="PackedScene" uid="uid://ckr1j0h5jxv6w" path="res://scenes/ui/hud.tscn" id="4_hud"]
+[ext_resource type="PackedScene" path="res://scenes/ui/pause_menu.tscn" id="5_pause"]
 
 [node name="World" type="Node2D" unique_id=1413459950]
 
 [node name="HUD" parent="." instance=ExtResource("4_hud")]
 
+[node name="PauseMenu" parent="." instance=ExtResource("5_pause")]
+
 [node name="BackgroundLayer" type="CanvasLayer" parent="." unique_id=1239847129]
 layer = -1
 
-[node name="Background" type="ColorRect" parent="BackgroundLayer" unique_id=512368828]
+[node name="Background" type="ColorRect" parent="BackgroundLayer" unique_id=512368828 groups=["world_background"]]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -27,6 +31,9 @@ color = Color(0.101960786, 0.101960786, 0.18039216, 1)
 script = ExtResource("2_1fp7r")
 enemy_scene = ExtResource("3_6m72w")
 
-[node name="EnemyContainer" type="Node2D" parent="." unique_id=234611869]
+[node name="EnemyContainer" type="Node2D" parent="." unique_id=234611869 groups=["enemy_container"]]
+
+[node name="DestructibleSpawner" type="Node2D" parent="." unique_id=9876543211]
+script = ExtResource("6_destspawn")
 
 [node name="BulletContainer" type="Node2D" parent="." unique_id=1424444852]
